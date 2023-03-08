@@ -1,0 +1,22 @@
+{
+  "builds": [
+    {
+      "src": "JASPER/wsgi.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "deploy.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "JASPER/wsgi.py"
+    }
+  ]
+}
+
