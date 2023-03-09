@@ -8,7 +8,7 @@ echo "
 ___________________________"
 echo "Downloading requirements"
 echo "___________________________"
-python -m pip install -r requirements.txt
+python3.9 -m pip install -r requirements.txt
 
 
 echo "
@@ -23,25 +23,10 @@ echo "
 ___________________________"
 echo "Collecting static files (css, img, js)"
 echo "___________________________"
-python manage.py collectstatic --noinput --clear
-
-
-echo "
-___________________________"
-echo "Dealing with unused files (tests, .gitignore, ...)"
-echo "___________________________"
-find requirements.txt -delete
-find .gitignore -delete
-find LICENSE -delete
-find tests/* tests/.*  -delete
-rmdir tests
-find requirements/* requirements/.*  -delete
-rmdir requirements
+python3.9 manage.py collectstatic --noinput --clear
 
 
 echo "
 
 Ending deploy build"
 echo "___________________________"
-
-
