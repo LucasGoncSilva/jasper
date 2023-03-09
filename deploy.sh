@@ -15,8 +15,8 @@ echo "
 ___________________________"
 echo "Migrating DB"
 echo "___________________________"
-#python manage.py makemigrations
-#python manage.py migrate
+# python3.9 manage.py makemigrations
+# python3.9 manage.py migrate
 
 
 echo "
